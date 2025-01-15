@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .menu {
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .menu_item {
+            width: 25%;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid black;
+            text-align: center;
+            background-color: skyblue;
+            color: white;
+            position: relative;
+        }
+
+        .menu_item:hover {
+            background-color: #7bbbd7;
+        }
+
+        .hidden_menu {
+            display: none;
+            width: 50%;
+            background-color: antiquewhite;
+            color: gray;
+            padding: 5px;
+            box-sizing: border-box;
+            border: 1px solid beige;
+            position: absolute;
+            left: 0;
+            top: 40px;
+            z-index: 2;
+        }
+
+        .menu_item:hover .hidden_menu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li class="menu_item">메뉴1
+            <!-- 하위 메뉴 -->
+            <ul class="hidden_menu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+            </ul>
+        </li>
+        <li class="menu_item">메뉴2
+            <!-- 하위 메뉴 -->
+            <ul class="hidden_menu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+            </ul>
+        </li>
+        <li class="menu_item">메뉴3
+            <!-- 하위 메뉴 -->
+            <ul class="hidden_menu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+            </ul>
+        </li>
+        <li class="menu_item">메뉴4
+            <!-- 하위 메뉴 -->
+            <ul class="hidden_menu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quo mollitia voluptatem ullam earum possimus ipsum aspernatur impedit totam sequi a perspiciatis temporibus neque repellat saepe obcaecati exercitationem nostrum quibusdam!
+    Beatae eius accusantium ea placeat illum consectetur, itaque natus quaerat iusto velit quia fugiat vitae aliquam animi ab aliquid, quae enim. Obcaecati, totam delectus voluptate placeat commodi nam ipsum quia?
+    Sit, est ut. Quod laboriosam adipisci amet officia deserunt quia dicta sed quis magnam sit numquam doloribus, dolore quos, itaque ipsa accusantium facilis ipsam commodi ratione aperiam sequi autem. Quod.
+    Ratione a quas voluptas, corrupti similique maiores architecto modi nostrum magnam eius, debitis repellendus enim tenetur. Libero, beatae aspernatur. Fugit, eveniet soluta animi a ab ad ipsum pariatur dolor totam.
+    Ipsum maxime eius error tenetur nesciunt quo atque iure itaque saepe, vel facere architecto debitis libero eaque quidem aliquid modi alias suscipit aspernatur deleniti velit possimus. Adipisci rem eligendi laudantium?
+    Vel tempore numquam amet deserunt soluta ad. Molestiae, non voluptate aut, commodi animi aliquam, fuga quam tempora quia est ipsam nobis explicabo ratione ad facere iure molestias voluptatum quo! Quam!
+    Quibusdam, quis. Neque quis eum atque consequatur veniam. Deserunt labore ut, ducimus illum inventore, praesentium dignissimos, itaque deleniti placeat esse iure. Dolor fugit sint blanditiis sunt et repudiandae, similique illo.
+    Provident explicabo, ipsa expedita quis maiores nam harum aut esse ut. Rerum, nesciunt distinctio dolor aperiam assumenda cupiditate. Nisi minima in commodi iste? Voluptates tempore ut molestias sunt nobis rem.
+    Magnam culpa esse, dicta ratione dolorum voluptas recusandae accusamus amet necessitatibus maiores cumque harum, quos debitis consectetur? Odio animi, aspernatur quasi laudantium, in debitis quos, error exercitationem maiores itaque nobis.
+    Unde voluptatum dolorem nostrum beatae animi corrupti a consequatur esse sint sapiente quasi ullam, nihil laudantium natus ut dolor quam sed? Ab sint obcaecati et dolorem dolores odio quidem totam?</p>
+</body>
+
+</html>

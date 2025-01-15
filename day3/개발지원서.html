@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+        h1,
+        h2,
+        p,
+        li {
+            font-family: 'Gamja Flower', serif;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .wrap {
+            width: 550px;
+            border: 1px solid black;
+            margin: 0 auto;
+            padding: 20px 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        ul>li {
+            margin-bottom: 20px;
+        }
+
+        li>input[type=text] {
+            height: 20px;
+        }
+
+        .labelText{
+            width: 40px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        label {
+            margin: 5px;
+        }
+
+        textarea {
+            width: 95%;
+            align-self: center;
+        }
+
+        .buttonArea {
+            align-self: center;
+            margin-top: 20px;
+        }
+
+        button {
+            border: none;
+            padding: 5px;
+            background-color:  rgb(218, 218, 218);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="title">
+            <h1>프런트엔드 개발자 지원서</h1>
+            <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+            <hr>
+        </div>
+        <h2>개인정보</h2>
+        <ul>
+            <li><label for="name" class="labelText">이름</label><input type="text" placeholder="공백없이 입력하세요" id="name"></li>
+            <li><label for="call" class="labelText">연락처</label><input type="text" id="call"></li>
+        </ul>
+        <h2>지원 분야</h2>
+        <ul>
+            <form>
+                <li><input type="radio" name="selection" id="1"><label for="1">웹 퍼블리싱</label></li>
+                <li><input type="radio" name="selection" id="2"><label for="2">웹 어플리케이션 개발</label></li>
+                <li><input type="radio" name="selection" id="3" checked><label for="3">개발 환경 개선</label>
+                </li>
+            </form>
+        </ul>
+        <h2>지원 동기</h2>
+        <textarea name="" id="" rows="5" placeholder="봉자 지원 동기를 간략히 써 주세요."></textarea>
+        <div class="buttonArea">
+            <button type="submit">접수하기</button>
+            <button>다시쓰기</button>
+        </div>
+    </div>
+</body>
+
+</html>
