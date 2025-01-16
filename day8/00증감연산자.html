@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            증감연산자 ++ (번수의 값을 1 증가), -- (변수의 값을 1 감소)
+
+            let a = 1;
+
+            a++;
+            ++a;
+
+            let b = 10;
+            b--;
+            --b;
+
+        */
+
+        let a = 10;
+        let b = 10;
+
+        console.log(a++, ++b)
+
+        // ++a : 변수의 값을 1 증가시킨다. 연산의 결과로 증가되기 전의 값을 변환함
+        // a++ : 변수의 값을 1 증가시킨다. 연산의 결과로 증가된 후의 값을 변환함
+
+        let d = 10;
+        let f = 10;
+
+        console.log(d--, --f);
+        console.log(d, f)
+
+        let x = 10, y = 10, z = 10;
+
+        x++;
+        --y;
+        --z;
+
+        let result = x++ + y++ + ++z;
+        console.log(result)
+
+    </script>
+</body>
+
+</html>
