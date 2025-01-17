@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = 100;
+        function 랜덤수(maxNum) {
+            let rNum = [];
+            for (let i = 0; i < 10; i++) {
+                rNum[i] = Math.floor(Math.random() * maxNum + 1);
+            }
+            return rNum;
+        }
+
+
+        let result = [];
+        for (let i = 0; i < num; i++) {
+            result[i] = 0;
+        }
+        for (let i = 0; i < 1000; i++) {
+            for (let j = 0; j < 6; j++) {
+                result[랜덤수(num)[j] - 1]++;
+            }
+        }
+        document.write(result)
+        document.write("<br>");
+        for (let i = 0; i < num; i++) {
+            document.write((i + 1) + "번 : ");
+            for (let j = 0; j < result[i]; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        
+    </script>
+</body>
+
+</html>

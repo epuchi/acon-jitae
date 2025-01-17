@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function 뽑기(tryNum, probability) {
+            for(let i = 0; i < tryNum; i++) {
+                let rNum = Math.floor(Math.random()*1000)
+                document.write(`${i + 1} 번째 결과 : `)
+                if(rNum < probability * 10) {
+                    document.write(`@@@@@당첨@@@@@@<br>`)
+                } else {
+                    document.write(`꽝!<br>`)
+                }
+            }
+        }
+
+        function 확률계산(tryNum, probability) {
+            let list = []
+            let succese = probability / 100;
+            let fail = 100 - succese;
+            for (let i = 1; i <= tryNum; i++) {
+                list[i-1] = (succese**i) * 100
+            }
+            document.write(`${tryNum} 시도 시 당첨 확률 : <br>`)
+            document.write(list)
+
+        }
+        확률계산(10, 1.5)
+        뽑기(10, 1.5)
+    </script>
+</body>
+</html>
