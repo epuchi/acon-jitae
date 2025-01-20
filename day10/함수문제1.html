@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function 홀수확인(input) {
+            switch (input % 2) {
+                case 0:
+                    return false
+                case 1:
+                    return true
+                default:
+                    return alert("수가 아닙니다.") 
+            }
+        }
+
+        let input = parseInt(prompt("수를 입력하세요"))
+        alert(홀수확인(input))
+        
+    </script>
+</body>
+
+</html>
