@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let snackName = "맛동산";
+
+        let snack = {
+            이름: "맛동산",
+            제조사: "오리온",
+            무개: 200,
+            가격: 3800,
+        };
+
+        console.log(snack.이름);
+        console.log(snack.제조사);
+        console.log(snack.무개);
+        console.log(snack.가격);
+
+        let snack2 = {
+            이름: "맛동산",
+            제조사: "오리온",
+            무개: 200,
+            가격: 3800,
+
+            printInfo : function() {
+                alert(this.이름 + this.제조사)
+            }
+        };
+
+        snack2.printInfo()
+    </script>
+</body>
+
+</html>

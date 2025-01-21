@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //국어점수 5새 총점과 평균 구하기
+
+        let socres = [90, 80, 77, 100, 89];
+        
+        let sum = 0;
+        //총점 구하기
+        for(let i = 0; i < socres.length; i++) {
+            sum += socres[i]
+        }
+        document.write(`총점은 : ${sum}<br>`)
+
+        //평균 구하기
+        
+        document.write(`평균은은 : ${sum/socres.length}`)
+    </script>
+</body>
+
+</html>
