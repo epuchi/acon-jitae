@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .ball {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: aquamarine;
+            font-size: 18px;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+
+    <script>
+        function make_lotto(num) {
+            let nums = new Array(num)
+
+            for (let i = 0; i < num; i++) {
+                nums[i] = parseInt(Math.floor(Math.random() * 45 + 1))
+                for (let j = 0; j < i; j++) {
+                    if (nums[i] == nums[j]) {
+                        i--;
+                    }
+                }
+            }
+
+            return nums
+        }
+
+        function lotto() {
+            let nums = make_lotto(7);
+
+            nums.sort((a, b) => {
+                return a - b
+            });
+
+            const result = document.getElementById("result")
+            for (let i = 0; i < nums.length; i++) {
+                const div = document.createElement("div");
+                result.appendChild(div)
+                div.classList.add("ball")
+                div.innerHTML = nums[i]
+                let rColor = Math.floor(parseInt(Math.random() * 256))
+                let gColor = Math.floor(parseInt(Math.random() * 256))
+                let bColor = Math.floor(parseInt(Math.random() * 256))
+                div.style.backgroundColor = `rgb(${rColor},${gColor},${bColor})`;
+            }
+            const div = document.createElement("div");
+            result.appendChild(div)
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="lotto()">로또번호</button>
+    <h2> 로또공 7개 띄우기 </h2>
+
+    <div id="result">
+
+    </div>
+
+</body>
+
+</html>

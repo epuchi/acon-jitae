@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // map배열매서드
+        // ~님
+
+        let names=[ "박시우", "권지언", "이동우"];
+
+        //
+        let newNames=[];
+
+        for( let i=0; i<names.length; i++){
+            let item = names[i];
+            newNames[i] = item + "님";
+        }
+
+        console.log( names);
+        console.log(newNames);
+
+
+        names.map( function(item, index){
+            return item + "씨";
+        });
+
+        console.log(newNames);
+    </script>
+</body>
+</html>

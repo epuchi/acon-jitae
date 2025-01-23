@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let nums1 =
+            [[1, 2, 3],
+            [5, 6, 7]];
+        let nums2 =
+            [[7, 8],
+            [9, 10],
+            [11, 12]];
+        let nums3 =
+            [[1, 2, 3],
+            [9, 5, 6],
+            [4, 4, 2],
+            [4, 1, 0]];
+        let nums4 =
+            [[1, 8, 7, 8],
+            [9, 11, 4, 8],
+            [3, 12, 7, 2]];
+
+
+        function metrix_times(arr1, arr2, fn) {
+            let rows = arr1.length;
+            let columns = arr2[0].length;
+
+
+
+            let result = new Array(rows);
+            for (let i = 0; i < rows; i++) {
+                result[i] = new Array(columns);
+            }
+
+            for (let i = 0; i < rows; i++) {
+                for (let j = 0; j < columns; j++) {
+                    result[i][j] = 0;
+                    for (let k = 0; k < arr2.length; k++) {
+                        let sum = arr1[i][k] * arr2[k][j];
+                        result[i][j] += sum
+                    }
+                }
+            }
+
+            if (rows != columns) {
+                fn('num1의 행과 num2열의 크기가 같아야 합니다.');
+            } else {
+                for (let i = 0; i < result.length; i++) {
+                    for (let j = 0; j < result[i].length; j++) {
+                        fn(result[i][j]);
+                    }
+                    document.write(`<br>`)
+                }
+            }
+        }
+
+        metrix_times(nums1, nums2, (item) => {
+            document.write(`[${item}]`);
+            // console.log(item)
+        })
+        document.write(`<br>`)
+        metrix_times(nums3, nums4, function (item) {
+            document.write(`[${item}]`);
+            // console.log(item)
+        })
+    </script>
+</body>
+
+</html>

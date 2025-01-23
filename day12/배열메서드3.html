@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 배열 반복하기 forEach()
+        // 
+        const 이름 = ['영숙', '순자', '영자', '옥순', '현숙'];
+
+        for (let i = 0; i < 이름.length; i++) {
+            let item = 이름[i];
+            console.log(item);
+        }
+
+        이름.forEach(element => {
+            console.log(element);
+        });
+
+        이름.forEach(function (item, index) { console.log(item, index) })
+
+        이름.forEach(function (a, b) {
+            document.write(`<li> ${a} </li>`)
+        })
+
+        이름.forEach((item, index)=>{
+            console.log(item, index)
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="date200"></div>
+    <script>
+        let spacDate = new Date("2025-01-07");
+        spacDate.setDate(spacDate.getDate() + 200);
+        
+        let year = spacDate.getFullYear();
+        let month = spacDate.getMonth() + 1;
+        let date = spacDate.getDate()
+
+        document.querySelector(".date200").innerHTML = `${year} ${month} ${date}`;
+    </script>
+</body>
+</html>

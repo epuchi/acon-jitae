@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function solution(video_len, pos, op_start, op_end, commands) {
+            var answer = video_len;
+
+
+
+            let pos_time = pos.split(':');
+            console.log(parseInt(pos_time[1])+10)
+
+            while (commands[0]) {
+                switch (commands.shift()) {
+                    case "next":
+                        pos_time[1]
+                        break;
+                    case "prev":
+                        break;
+                }
+            }
+
+
+            return answer;
+        }
+
+        solution("34:33", "13:00", "00:55", "02:55", ["next", "prev"]) //"13:00"
+        solution("10:55", "00:05", "00:15", "06:55", ["prev", "next", "next"]) // "06:55"
+        solution("07:22", "04:05", "00:15", "04:07", ["next"]) //"04:17"
+    </script>
+</body>
+
+</html>

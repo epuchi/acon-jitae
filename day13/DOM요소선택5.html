@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function calcAmount() {
+            let price = 0;
+            let priceArr = document.querySelectorAll(".price");
+
+            // for (let i = 0; i < priceArr.length; i++) {
+            //     price += parseInt(priceArr[i].innerHTML);
+            // }
+            priceArr.forEach(item => {
+                price += parseInt(item.innerHTML);
+            });
+
+            document.querySelector("#totalAmt").innerHTML = price;
+        
+        }
+    </script>
+</head>
+<body>
+    <div class="price">100</div>
+    <div class="price">150</div>
+    <div class="price">200</div>
+    <div class="price">100</div>
+    <div class="price">300</div>
+    주문금액 : <span id="totalAmt"> </span>
+
+    <button onclick="calcAmount()">주문금액</button>
+</body>
+</html>

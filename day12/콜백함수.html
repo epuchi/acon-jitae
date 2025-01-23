@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function hi() {
+            document.write(`Hi<br>`);
+        }
+        setTimeout(hi, 200);
+
+        //setTimeout(funtion(){},1000);
+        setTimeout(function () {
+            alert("익명함수");
+        }, 5000)
+
+        //setTimeout(()->{},1000);
+        setTimeout(() => {
+            alert("화살표 함수")
+        }, 7000)
+    </script>
+</body>
+
+</html>

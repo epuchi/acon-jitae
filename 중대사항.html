@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <script>
+        let list = ["김밥", "국밥", "자장면", "우동", "돈까스", "햄버거", "서브웨이",
+            "라멘", "토스트", "덮밥", "초밥", "이테리식당", "콩불", "발바리네", "부대찌개",
+
+        ]
+
+        let rNum = Math.floor(Math.random() * list.length)
+        let time = 300;
+
+        for (let i = 1; i <= time; i++) {
+            setTimeout(() => {
+                document.write(`${list[i%list.length]}\t`)
+            }, 10*i)
+        }
+        setTimeout(() => {
+            document.write(`<br><h1>오늘의 점심 : ${list[rNum]}</h1>`)
+        }, time*10)
+
+    </script>
+</body>
+
+</html>

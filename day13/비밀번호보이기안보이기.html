@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function toggle() {
+            let pswd = document.querySelector("input")
+            let btn = document.getElementById("btn")
+            pswd.type === "password" ? pswd.type = "text" : pswd.type = "password"
+            btn.innerHTML === "보이기" ? btn.innerHTML = "안보이기" : btn.innerHTML = "보이기"
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <input type="password" placeholder="비밀번호입력하세요">
+    <button onclick="toggle()" id="btn">보이기</button>
+</body>
+
+</html>
