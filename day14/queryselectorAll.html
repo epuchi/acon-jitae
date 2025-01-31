@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <p class="a"></p>
+    <p class="a"></p>
+    <p class="a"></p>
+    <p class="a"></p>
+
+    <script>
+        const a = document.querySelectorAll(".a")
+        console.log(a)
+
+        a[0].innerHTML = 'asd'
+        a[1].innerHTML = 'asd'
+
+        // alert(a[3].innerHTML)
+    </script>
+</body>
+</html>

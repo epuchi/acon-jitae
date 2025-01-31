@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <script>
+
+
+        function start() {
+            let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+            let a = document.getElementById("a")
+            let b = document.getElementById("b")
+            let c = document.getElementById("c")
+            let t = 100;
+            while (t < 10000) {
+                setTimeout(() => {
+                    let rn1 = Math.floor(Math.random() * 10)
+                    let rn2 = Math.floor(Math.random() * 10)
+                    let rn3 = Math.floor(Math.random() * 10)
+                    a.innerHTML = arr[rn1]
+                    b.innerHTML = arr[rn2]
+                    c.innerHTML = arr[rn3]
+                    t += 100
+                }, 100 + t)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="start()">start</button>
+    <h1 id="a">0</h1>
+    <button onclick="stop1()">stop</button>
+    <h1 id="b">0</h1>
+    <button onclick="stop2()">stop</button>
+    <h1 id="c">0</h1>
+    <button onclick="stop3()">stop</button>
+</body>
+
+</html>

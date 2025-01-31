@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        let arr = [];
+        function makeArray() {
+            let menu = document.querySelectorAll(".menu > div");
+            menu.forEach(item => {
+                arr.push(item.innerHTML);
+            });
+            console.log(arr)
+        }
+    </script>
+</head>
+
+<body>
+    <div class="menu">
+        <div>돈까스</div>
+        <div>제육</div>
+        <div>오므라이스</div>
+        <div>카레</div>
+    </div>
+
+    <button onclick="makeArray()">클릭</button>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getRandomColor() {
+            const colors = [
+                "red", "blue", "green", "yellow", "purple", "orange",
+                "pink", "brown", "cyan", "magenta", "lime", "teal",
+                "navy", "gold", "coral", "salmon", "beige", "khaki",
+                "olive", "maroon", "turquoise", "lavender", "violet"
+            ];
+
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            return colors[randomIndex]
+        }
+
+        result = getRandomColor();
+        console.log(result)
+    </script>
+</body>
+
+</html>

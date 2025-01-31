@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> div 태그내의 자식 요소 선택</h2>
+    <div id="movie">
+        <p>범죄도시</p>
+        <p>범죄도시2</p>
+        <p>범죄도시3</p>
+    </div>
+
+    <script>
+        const movie = document.getElementById("movie")
+        const pE1 = movie.firstElementChild;
+        const pE2 = pE1.nextElementSibling;
+        const pE3 = movie.lastElementChild
+
+        document.write(pE1.innerHTML)
+        document.write("<br>")
+        document.write(pE2.innerHTML)
+        document.write("<br>")
+        document.write(pE3.innerHTML)
+    </script>
+</body>
+</html>
