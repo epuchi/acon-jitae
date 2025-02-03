@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            display: inline-block;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item">아메리카노</div>
+    <div class="item">라때</div>
+    <div class="item">복숭아티</div>
+
+    <script>
+        const menu = document.querySelectorAll(".item");
+        console.log(menu)
+        menu.forEach(item => {
+            item.addEventListener("click", (e) => {
+                const content = e.target.innerHTML;
+                alert(content)
+            })
+        });
+    </script>
+
+</body>
+
+</html>

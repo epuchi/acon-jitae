@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .wrap {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 150px;
+            position: relative;
+        }
+
+        .block {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .width {
+            border: 1px solid black;
+            width: 500px;
+            height: 130px;
+            position: absolute;
+            top: 0;
+            transform: translateY(-100%);
+            flex-direction: row;
+            font-size: 18px;
+
+        }
+
+        .height {
+            border: 1px solid black;
+            width: 100px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            transform: translateX(-100%);
+            flex-direction: column;
+            font-size: 18px;
+        }
+
+        .width>.stick {
+            border: 1px solid black;
+            width: 50px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            padding-bottom: 5px;
+        }
+
+        .width>.stick>div {
+            width: 100%;
+            height: 20px;
+            justify-content: center;
+        }
+
+        .height>.stick {
+            border: 1px solid black;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            padding-right: 5px;
+        }
+
+        .height>.stick>div {
+            width: 13px;
+            height: 100%;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="width"></div>
+        <div class="height"></div>
+    </div>
+    <script>
+        const numbers = {
+            widthNum: [
+                [6],
+                [2, 3],
+                [3],
+                [1, 1, 1],
+                [6],
+                [4, 1, 1],
+                [5],
+                [4, 1],
+                [4, 1],
+                [3, 3],
+            ],
+            heightNum: [
+                [4],
+                [2, 4],
+                [6],
+                [6],
+                [3, 3],
+                [6],
+                [1, 1, 1],
+                [2, 1, 1],
+                [2, 3],
+                [2, 1, 1],
+            ],
+        }
+        const wrap = document.querySelector(".wrap")
+        for (let i = 0; i < 100; i++) {
+            const block = document.createElement("div");
+            block.classList.add("block");
+            wrap.appendChild(block);
+        }
+
+        const width = document.querySelector(".width")
+        for (let i = 0; i < 10; i++) {
+            const stick = document.createElement("div");
+            stick.classList.add("stick");
+            numbers.widthNum[i].forEach(item => {
+                stick.innerHTML += `<div>${item}<div>`
+            })
+            width.appendChild(stick);
+        }
+        const height = document.querySelector(".height")
+        for (let i = 0; i < 10; i++) {
+            const stick = document.createElement("div");
+            stick.classList.add("stick");
+            numbers.heightNum[i].forEach(item => {
+                stick.innerHTML += `<div>${item}<div>`
+            })
+            height.appendChild(stick);
+        }
+
+        const wstick = document.querySelectorAll(".width>.stick")
+        const hstick = document.querySelectorAll(".height>.stick")
+        const block = document.querySelectorAll(".block")
+        block.forEach((item, index) => {
+            item.addEventListener(("click"), (e) => {
+                item.style.backgroundColor === "black" ?
+                    item.style.backgroundColor = "white" :
+                    item.style.backgroundColor = "black";
+            })
+            item.addEventListener(("mousemove"), (e) => {
+                for (let i = 0; i < 10; i++) {
+                    block[(index % 10) + (i * 10)].style.border = "1px solid skyblue";
+                    block[(Math.floor(index / 10) * 10) + i].style.border = "1px solid skyblue";
+                }
+                item.style.border = "2px solid blue";
+                wstick[index % 10].style.border = "2px solid skyblue";
+                hstick[Math.floor(index / 10)].style.border = "2px solid skyblue";
+            })
+            item.addEventListener(("mouseout"), (e) => {
+                for (let i = 0; i < 10; i++) {
+                    block[(index % 10) + (i * 10)].style.border = "1px solid black";
+                    block[(Math.floor(index / 10) * 10) + i].style.border = "1px solid black";
+                }
+                item.style.border = "1px solid black";
+                wstick[index % 10].style.border = "1px solid black";
+                hstick[Math.floor(index / 10)].style.border = "1px solid black";
+            })
+        });
+
+        function check() {
+            for (let i = 0; i < 10; i++) {
+
+            }
+        }
+    </script>
+</body>
+
+</html>
