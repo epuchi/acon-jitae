@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            width: 100px;
+        }
+
+        li {
+            border: 1px solid black;
+            height: 40px;
+            position: relative;
+        }
+
+        li::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: red;
+
+            width: 0%;
+            height: 2px;
+            transition: 0.1s;
+        }
+
+        li:hover::after{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+    </ul>
+</body>
+
+</html>
